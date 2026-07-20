@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 
 const phrases = [
   "Ian's Here!",
-  "Average Pianist.",
-  "Manga Enjoyer.",
-  "Coffee-Powered Coder.",
+  "QUT Student.",
+  "Bali Native.",
+  "Coffee Addict.",
 ];
 
 export default function Typewriter() {
