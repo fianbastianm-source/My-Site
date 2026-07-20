@@ -1,6 +1,36 @@
 @import "tailwindcss";
 
 :root {
+  --bg: #241b3d;
+  --text-heading: #e1fbf1;
+  --text-body: #a9b8c9;
+  --accent: #86e0cc;
+  --accent-contrast: #241b3d;
+  --accent-hover: #e1fbf1;
+  --card-bg: #2f2653;
+  --card-border: #4b6079;
+  --tech-text: #4b6079;
+}
+
+.light {
+  --bg: #f4f9f7;
+  --text-heading: #241b3d;
+  --text-body: #4b5563;
+  --accent: #0d9488;
+  --accent-contrast: #ffffff;
+  --accent-hover: #0f766e;
+  --card-bg: #ffffff;
+  --card-border: #d1d5db;
+  --tech-text: #64748b;
+}
+
+.light .blob-1,
+.light .blob-2,
+.light .blob-3 {
+  opacity: 0.12;
+}
+
+:root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -17,6 +47,75 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+}
+
+@keyframes float1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(60px, -40px) scale(1.1); }
+}
+
+@keyframes float2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-50px, 50px) scale(1.15); }
+}
+
+@keyframes float3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(40px, 60px) scale(1.05); }
+}
+
+.blob-1 {
+  animation: float1 18s ease-in-out infinite;
+}
+
+.blob-2 {
+  animation: float2 22s ease-in-out infinite;
+}
+
+.blob-3 {
+  animation: float3 20s ease-in-out infinite;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: scroll 25s linear infinite;
+}
+
+.marquee-container:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.fade-in-delay-1 {
+  animation: fadeInUp 0.8s ease-out 0.15s forwards;
+  opacity: 0;
+}
+
+.fade-in-delay-2 {
+  animation: fadeInUp 0.8s ease-out 0.3s forwards;
+  opacity: 0;
 }
 
 body {
