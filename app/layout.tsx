@@ -1,10 +1,10 @@
-import { Space_Grotesk } from "next/font/google";
+import { Manrope } from "next/font/google";
 import "./globals.css";
 import ThemeToggle from "@/components/ThemeToggle";
 
-const spaceGrotesk = Space_Grotesk({
+const manrope = Manrope({
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
+  weight: ["400", "500", "700", "800"],
 });
 
 export default function RootLayout({
@@ -27,7 +27,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={spaceGrotesk.className}>
+      <body className={manrope.className}>
         <ThemeToggle />
         {children}
       </body>

@@ -1,6 +1,10 @@
 import ProjectCard from "@/components/ProjectCard";
 import { projects } from "@/data/project";
 import Typewriter from "@/components/Typewriter";
+import AchievementCard from "@/components/AchievementCard";
+import { achievements } from "@/data/achievement";
+import Image from "next/image";
+import VideoCard from "@/components/VideoCard";
 
 export default function Home() {
   return (
@@ -11,6 +15,18 @@ export default function Home() {
 
       <div className="relative z-10 flex flex-col items-center w-full">
         <div className="max-w-2xl text-center">
+          <div className="flex justify-center mb-6 group cursor-pointer">
+  <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-[var(--accent)] transition-transform duration-300 group-hover:scale-110">
+    <Image
+      src="/pfp.jpg"
+      alt="Fian Molanza"
+      width={160}
+      height={160}
+      className="w-full h-full object-cover"
+      priority
+    />
+  </div>
+</div>
           <p className="text-sm uppercase tracking-widest text-[var(--accent)] mb-4 fade-in">
             Full-Stack Developer
           </p>
@@ -55,6 +71,42 @@ export default function Home() {
             <ProjectCard key={project.title} project={project} />
           ))}
         </section>
+        <section className="w-full max-w-5xl mt-16 mb-20">
+  <h2 className="text-2xl font-bold text-[var(--text-heading)] mb-6 text-center">
+    Achievements
+  </h2>
+  <div className="rounded-2xl bg-[var(--card-bg)] border border-[var(--accent)]/40 overflow-hidden grid grid-cols-1 md:grid-cols-2">
+    {achievements.map((achievement) => (
+      <div key={achievement.title} className="p-6 relative">
+        <span className="absolute top-6 right-6 text-xs uppercase tracking-widest text-[var(--accent)]">
+          Hackathon
+        </span>
+
+        <h3 className="text-xl font-bold text-[var(--text-heading)] mb-1">
+          {achievement.title}
+        </h3>
+        <p className="text-sm text-[var(--accent)] mb-3">{achievement.event}</p>
+
+        <p className="text-[var(--text-body)] text-sm leading-relaxed mb-4">
+          {achievement.description}
+        </p>
+
+        <div className="flex flex-wrap gap-2">
+          {achievement.tags.map((tag) => (
+            <span
+              key={tag}
+              className="text-xs px-3 py-1 rounded-full bg-[var(--accent)]/10 text-[var(--accent)]"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      </div>
+    ))}
+
+    <VideoCard />
+  </div>
+</section>
       </div>
     </main>
   );
