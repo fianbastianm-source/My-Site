@@ -3,6 +3,7 @@ export type Project = {
   description: string;
   tags: string[];
   link: string;
+  image: string;
 };
 
 export const projects: Project[] = [
@@ -12,6 +13,7 @@ export const projects: Project[] = [
       "A C# console application modeling airport operations, including flight scheduling, seat allocation, delays, and frequent-flyer points across three distinct user roles, built with clean object-oriented design.",
     tags: ["C#", "OOP", "Console App"],
     link: "https://github.com/fianbastianm-source/brisbane-airport-system",
+    image: "/Airport.png",
   },
   {
     title: "Property Rentals Platform",
@@ -19,12 +21,14 @@ export const projects: Project[] = [
       "A full-stack rental marketplace built for a university web development unit. Features property search and filtering, JWT-based authentication, user profiles, and a star-rating and comments system, backed by a documented REST API.",
     tags: ["React", "Node.js", "Express", "MySQL"],
     link: "https://github.com/fianbastianm-source/Property-Rentals",
+    image: "/Rental.png",
   },
   {
     title: "LifeSync AI",
     description:
       "A JavaFX desktop app built with a six-person team that helps students build better timetables by interpreting lifestyle constraints in natural language and generating ranked, explainable schedule recommendations. I led the recommendation validation layer, ensuring generated timetables were conflict-free and consistent before scoring.",
     tags: ["Java", "JavaFX", "SQLite", "Claude API"],
-    link: "#",
+    link: "https://github.com/mxbdesign/sightline",
+    image: "/Lifesync.png",
   },
 ];

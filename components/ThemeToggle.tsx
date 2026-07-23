@@ -22,7 +22,7 @@ export default function ThemeToggle() {
       suppressHydrationWarning
       className="fixed top-6 right-6 z-50 w-12 h-12 rounded-full border border-[var(--accent)] bg-[var(--bg)] flex items-center justify-center text-lg hover:scale-110 transition-all duration-200"
     >
-      {isLight ? "⚫️" : "☀︎"}
+      {isLight ? "☀︎" : "⚫️"}
     </button>
   );
 }

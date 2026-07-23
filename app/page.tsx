@@ -5,6 +5,7 @@ import AchievementCard from "@/components/AchievementCard";
 import { achievements } from "@/data/achievement";
 import Image from "next/image";
 import VideoCard from "@/components/VideoCard";
+import ProjectRow from "@/components/ProjectRow";
 
 export default function Home() {
   return (
@@ -66,14 +67,18 @@ export default function Home() {
           </div>
         </div>
 
-        <section className="w-full max-w-5xl mt-20 grid grid-cols-1 md:grid-cols-3 gap-6">
-          {projects.map((project) => (
-            <ProjectCard key={project.title} project={project} />
-          ))}
-        </section>
+<section className="w-full max-w-5xl mt-24 flex flex-col gap-24">
+  {projects.map((project, index) => (
+    <ProjectRow
+      key={project.title}
+      project={project}
+      reverse={index % 2 === 1}
+    />
+  ))}
+</section>
         <section className="w-full max-w-5xl mt-16 mb-20">
   <h2 className="text-2xl font-bold text-[var(--text-heading)] mb-6 text-center">
-    Achievements
+    What I've Built
   </h2>
   <div className="rounded-2xl bg-[var(--card-bg)] border border-[var(--accent)]/40 overflow-hidden grid grid-cols-1 md:grid-cols-2">
     {achievements.map((achievement) => (

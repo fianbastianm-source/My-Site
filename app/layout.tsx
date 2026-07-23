@@ -19,7 +19,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `
               try {
-                if (localStorage.getItem('theme') === 'light') {
+                if (localStorage.getItem('theme') === 'dark') {
                   document.documentElement.classList.add('light');
                 }
               } catch (e) {}
