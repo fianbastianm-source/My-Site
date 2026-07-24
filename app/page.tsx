@@ -10,9 +10,11 @@ import ProjectRow from "@/components/ProjectRow";
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col items-center px-6 py-20 bg-[var(--bg)] relative overflow-hidden transition-colors duration-300">
-      <div className="blob-1 absolute top-[-5%] left-[5%] w-[500px] h-[500px] bg-[#86e0cc] rounded-full blur-[100px] opacity-40 pointer-events-none" />
-      <div className="blob-2 absolute top-[25%] right-[-5%] w-[450px] h-[450px] bg-[#4b6079] rounded-full blur-[90px] opacity-50 pointer-events-none" />
-      <div className="blob-3 absolute bottom-[-15%] left-[30%] w-[500px] h-[500px] bg-[#e1fbf1] rounded-full blur-[100px] opacity-25 pointer-events-none" />
+      <div className="gradient-blob gradient-blob-left" />
+      <div className="gradient-blob gradient-blob-right" />
+      <div className="gradient-blob gradient-blob-bottom" />
+      <div className="gradient-blob gradient-blob-middle-left" />
+      <div className="gradient-blob gradient-blob-top" />
 
       <div className="relative z-10 flex flex-col items-center w-full">
         <div className="max-w-2xl text-center">

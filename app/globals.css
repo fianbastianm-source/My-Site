@@ -49,6 +49,72 @@
   }
 }
 
+@keyframes blobMorph {
+  0%, 100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  25% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  50% {
+    border-radius: 50% 60% 30% 60% / 30% 60% 70% 40%;
+  }
+  75% {
+    border-radius: 60% 40% 60% 30% / 70% 40% 60% 30%;
+  }
+}
+
+.gradient-blob {
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  filter: blur(20px);
+  opacity: 0.7;
+  animation: blobMorph 20s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.gradient-blob-left {
+  top: -15%;
+  left: -20%;
+  background: linear-gradient(135deg, #86e0cc, #4b6079, #86e0cc);
+}
+
+.gradient-blob-right {
+  top: 40%;
+  right: -20%;
+  background: linear-gradient(135deg, #4b6079, #86e0cc, #e1fbf1);
+  animation-duration: 25s;
+}
+
+.gradient-blob-bottom {
+  bottom: -15%;
+  left: 20%;
+  width: 700px;
+  height: 700px;
+  background: linear-gradient(135deg, #e1fbf1, #86e0cc, #4b6079);
+  animation-duration: 22s;
+}
+
+.gradient-blob-top {
+  top: -10%;
+  right: 10%;
+  width: 600px;
+  height: 600px;
+  background: linear-gradient(135deg, #4b6079, #e1fbf1, #86e0cc);
+  animation-duration: 18s;
+}
+
+.gradient-blob-middle-left {
+  top: 55%;
+  left: -18%;
+  width: 650px;
+  height: 650px;
+  background: linear-gradient(135deg, #86e0cc, #e1fbf1, #4b6079);
+  animation-duration: 23s;
+}
+
 @keyframes float1 {
   0%, 100% { transform: translate(0, 0) scale(1); }
   50% { transform: translate(60px, -40px) scale(1.1); }
