@@ -32,7 +32,7 @@ export default function Home() {
             Full-Stack Developer
           </p>
 
-          <h1 className="text-5xl font-bold mb-4 text-[var(--text-heading)] fade-in-delay-1 min-h-[1.2em]">
+          <h1 className="text-4xl sm:text-5xl font-bold mb-4 text-[var(--text-heading)] fade-in-delay-1 min-h-[2.4em] sm:min-h-[1.2em]">
             <Typewriter />
           </h1>
 
@@ -96,16 +96,16 @@ export default function Home() {
           {achievement.description}
         </p>
 
-        <div className="flex flex-wrap gap-2">
-          {achievement.tags.map((tag) => (
-            <span
-              key={tag}
-              className="text-xs px-3 py-1 rounded-full bg-[var(--accent)]/10 text-[var(--accent)]"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
+        <div className="flex flex-wrap gap-x-4 gap-y-2">
+  {achievement.tags.map((tag) => (
+    <span
+      key={tag}
+      className="text-sm text-[var(--accent)] font-medium"
+    >
+      {tag}
+    </span>
+  ))}
+</div>
       </div>
     ))}
 
