@@ -195,3 +195,28 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@media (max-width: 640px) {
+  .gradient-blob-top,
+  .gradient-blob-middle-left,
+  .gradient-blob-bottom {
+    display: none;
+  }
+
+  .gradient-blob-left,
+  .gradient-blob-right {
+    width: 220px;
+    height: 220px;
+    opacity: 0.3;
+  }
+
+  .gradient-blob-left {
+    top: -5%;
+    left: -10%;
+  }
+
+  .gradient-blob-right {
+    top: 60%;
+    right: -10%;
+  }
+}
