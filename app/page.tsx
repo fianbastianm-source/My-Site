@@ -9,12 +9,7 @@ import ProjectRow from "@/components/ProjectRow";
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col items-center px-6 py-20 bg-[var(--bg)] relative overflow-hidden transition-colors duration-300">
-      <div className="gradient-blob gradient-blob-left" />
-      <div className="gradient-blob gradient-blob-right" />
-      <div className="gradient-blob gradient-blob-bottom" />
-      <div className="gradient-blob gradient-blob-middle-left" />
-      <div className="gradient-blob gradient-blob-top" />
+<main className="min-h-screen flex flex-col items-center px-6 py-20 relative overflow-hidden transition-colors duration-300 bg-[radial-gradient(ellipse_at_center,var(--card-bg)_0%,var(--bg)_70%)]">
 
       <div className="relative z-10 flex flex-col items-center w-full">
         <div className="max-w-2xl text-center">
