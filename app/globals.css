@@ -51,16 +51,16 @@
 
 @keyframes blobMorph {
   0%, 100% {
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    border-radius: 55% 45% 40% 60% / 55% 40% 60% 45%;
   }
   25% {
-    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    border-radius: 40% 55% 60% 45% / 50% 55% 40% 55%;
   }
   50% {
-    border-radius: 50% 60% 30% 60% / 30% 60% 70% 40%;
+    border-radius: 50% 55% 40% 55% / 40% 55% 60% 45%;
   }
   75% {
-    border-radius: 60% 40% 60% 30% / 70% 40% 60% 30%;
+    border-radius: 55% 45% 55% 40% / 60% 45% 55% 40%;
   }
 }
 
@@ -68,7 +68,7 @@
   position: absolute;
   width: clamp(280px, 60vw, 800px);
   height: clamp(280px, 60vw, 800px);
-  filter: blur(20px);
+  filter: blur(80px);
   opacity: 0.7;
   animation: blobMorph 20s ease-in-out infinite;
   pointer-events: none;
